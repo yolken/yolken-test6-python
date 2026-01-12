@@ -11,7 +11,7 @@ It is generated with [Stainless](https://www.stainless.com/).
 
 ## Documentation
 
-The REST API documentation can be found on [example.com](http://example.com). The full API of this library can be found in [api.md](api.md).
+The REST API documentation can be found on [example2.com](http://example2.com). The full API of this library can be found in [api.md](api.md).
 
 ## Installation
 
