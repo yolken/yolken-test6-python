@@ -28,8 +28,11 @@ __all__ = ["StoreResource", "AsyncStoreResource"]
 
 
 class StoreResource(SyncAPIResource):
+    """Access to Petstore orders"""
+
     @cached_property
     def orders(self) -> OrdersResource:
+        """Access to Petstore orders"""
         return OrdersResource(self._client)
 
     @cached_property
@@ -72,8 +75,11 @@ class StoreResource(SyncAPIResource):
 
 
 class AsyncStoreResource(AsyncAPIResource):
+    """Access to Petstore orders"""
+
     @cached_property
     def orders(self) -> AsyncOrdersResource:
+        """Access to Petstore orders"""
         return AsyncOrdersResource(self._client)
 
     @cached_property
@@ -125,6 +131,7 @@ class StoreResourceWithRawResponse:
 
     @cached_property
     def orders(self) -> OrdersResourceWithRawResponse:
+        """Access to Petstore orders"""
         return OrdersResourceWithRawResponse(self._store.orders)
 
 
@@ -138,6 +145,7 @@ class AsyncStoreResourceWithRawResponse:
 
     @cached_property
     def orders(self) -> AsyncOrdersResourceWithRawResponse:
+        """Access to Petstore orders"""
         return AsyncOrdersResourceWithRawResponse(self._store.orders)
 
 
@@ -151,6 +159,7 @@ class StoreResourceWithStreamingResponse:
 
     @cached_property
     def orders(self) -> OrdersResourceWithStreamingResponse:
+        """Access to Petstore orders"""
         return OrdersResourceWithStreamingResponse(self._store.orders)
 
 
@@ -164,4 +173,5 @@ class AsyncStoreResourceWithStreamingResponse:
 
     @cached_property
     def orders(self) -> AsyncOrdersResourceWithStreamingResponse:
+        """Access to Petstore orders"""
         return AsyncOrdersResourceWithStreamingResponse(self._store.orders)
