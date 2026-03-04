@@ -105,18 +105,21 @@ class YolkenTest6(SyncAPIClient):
 
     @cached_property
     def pets(self) -> PetsResource:
+        """Everything about your Pets"""
         from .resources.pets import PetsResource
 
         return PetsResource(self)
 
     @cached_property
     def store(self) -> StoreResource:
+        """Access to Petstore orders"""
         from .resources.store import StoreResource
 
         return StoreResource(self)
 
     @cached_property
     def users(self) -> UsersResource:
+        """Operations about user"""
         from .resources.users import UsersResource
 
         return UsersResource(self)
@@ -291,18 +294,21 @@ class AsyncYolkenTest6(AsyncAPIClient):
 
     @cached_property
     def pets(self) -> AsyncPetsResource:
+        """Everything about your Pets"""
         from .resources.pets import AsyncPetsResource
 
         return AsyncPetsResource(self)
 
     @cached_property
     def store(self) -> AsyncStoreResource:
+        """Access to Petstore orders"""
         from .resources.store import AsyncStoreResource
 
         return AsyncStoreResource(self)
 
     @cached_property
     def users(self) -> AsyncUsersResource:
+        """Operations about user"""
         from .resources.users import AsyncUsersResource
 
         return AsyncUsersResource(self)
@@ -428,18 +434,21 @@ class YolkenTest6WithRawResponse:
 
     @cached_property
     def pets(self) -> pets.PetsResourceWithRawResponse:
+        """Everything about your Pets"""
         from .resources.pets import PetsResourceWithRawResponse
 
         return PetsResourceWithRawResponse(self._client.pets)
 
     @cached_property
     def store(self) -> store.StoreResourceWithRawResponse:
+        """Access to Petstore orders"""
         from .resources.store import StoreResourceWithRawResponse
 
         return StoreResourceWithRawResponse(self._client.store)
 
     @cached_property
     def users(self) -> users.UsersResourceWithRawResponse:
+        """Operations about user"""
         from .resources.users import UsersResourceWithRawResponse
 
         return UsersResourceWithRawResponse(self._client.users)
@@ -453,18 +462,21 @@ class AsyncYolkenTest6WithRawResponse:
 
     @cached_property
     def pets(self) -> pets.AsyncPetsResourceWithRawResponse:
+        """Everything about your Pets"""
         from .resources.pets import AsyncPetsResourceWithRawResponse
 
         return AsyncPetsResourceWithRawResponse(self._client.pets)
 
     @cached_property
     def store(self) -> store.AsyncStoreResourceWithRawResponse:
+        """Access to Petstore orders"""
         from .resources.store import AsyncStoreResourceWithRawResponse
 
         return AsyncStoreResourceWithRawResponse(self._client.store)
 
     @cached_property
     def users(self) -> users.AsyncUsersResourceWithRawResponse:
+        """Operations about user"""
         from .resources.users import AsyncUsersResourceWithRawResponse
 
         return AsyncUsersResourceWithRawResponse(self._client.users)
@@ -478,18 +490,21 @@ class YolkenTest6WithStreamedResponse:
 
     @cached_property
     def pets(self) -> pets.PetsResourceWithStreamingResponse:
+        """Everything about your Pets"""
         from .resources.pets import PetsResourceWithStreamingResponse
 
         return PetsResourceWithStreamingResponse(self._client.pets)
 
     @cached_property
     def store(self) -> store.StoreResourceWithStreamingResponse:
+        """Access to Petstore orders"""
         from .resources.store import StoreResourceWithStreamingResponse
 
         return StoreResourceWithStreamingResponse(self._client.store)
 
     @cached_property
     def users(self) -> users.UsersResourceWithStreamingResponse:
+        """Operations about user"""
         from .resources.users import UsersResourceWithStreamingResponse
 
         return UsersResourceWithStreamingResponse(self._client.users)
@@ -503,18 +518,21 @@ class AsyncYolkenTest6WithStreamedResponse:
 
     @cached_property
     def pets(self) -> pets.AsyncPetsResourceWithStreamingResponse:
+        """Everything about your Pets"""
         from .resources.pets import AsyncPetsResourceWithStreamingResponse
 
         return AsyncPetsResourceWithStreamingResponse(self._client.pets)
 
     @cached_property
     def store(self) -> store.AsyncStoreResourceWithStreamingResponse:
+        """Access to Petstore orders"""
         from .resources.store import AsyncStoreResourceWithStreamingResponse
 
         return AsyncStoreResourceWithStreamingResponse(self._client.store)
 
     @cached_property
     def users(self) -> users.AsyncUsersResourceWithStreamingResponse:
+        """Operations about user"""
         from .resources.users import AsyncUsersResourceWithStreamingResponse
 
         return AsyncUsersResourceWithStreamingResponse(self._client.users)
