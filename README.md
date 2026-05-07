@@ -20,7 +20,7 @@ Use the Yolken Test6 MCP Server to enable AI assistants to interact with this AP
 
 ## Documentation
 
-The REST API documentation can be found on [example17.com](http://example17.com). The full API of this library can be found in [api.md](api.md).
+The REST API documentation can be found on [example18.com](http://example18.com). The full API of this library can be found in [api.md](api.md).
 
 ## Installation
 
