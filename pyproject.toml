@@ -5,7 +5,7 @@ description = "The official Python library for the yolken-test6 API"
 dynamic = ["readme"]
 license = "Apache-2.0"
 authors = [
-{ name = "Yolken Test6", email = "benjamin3@stainless.com" },
+{ name = "Yolken Test6", email = "benjamin4@stainless.com" },
 ]
 
 dependencies = [
