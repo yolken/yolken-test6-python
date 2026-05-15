@@ -22,7 +22,7 @@ base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 class TestPets:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_create(self, client: YolkenTest6) -> None:
         pet = client.pets.create(
@@ -31,7 +31,7 @@ class TestPets:
         )
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_create_with_all_params(self, client: YolkenTest6) -> None:
         pet = client.pets.create(
@@ -52,7 +52,7 @@ class TestPets:
         )
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_create(self, client: YolkenTest6) -> None:
         response = client.pets.with_raw_response.create(
@@ -65,7 +65,7 @@ class TestPets:
         pet = response.parse()
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_create(self, client: YolkenTest6) -> None:
         with client.pets.with_streaming_response.create(
@@ -80,7 +80,7 @@ class TestPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_retrieve(self, client: YolkenTest6) -> None:
         pet = client.pets.retrieve(
@@ -88,7 +88,7 @@ class TestPets:
         )
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_retrieve(self, client: YolkenTest6) -> None:
         response = client.pets.with_raw_response.retrieve(
@@ -100,7 +100,7 @@ class TestPets:
         pet = response.parse()
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_retrieve(self, client: YolkenTest6) -> None:
         with client.pets.with_streaming_response.retrieve(
@@ -114,7 +114,7 @@ class TestPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_update(self, client: YolkenTest6) -> None:
         pet = client.pets.update(
@@ -123,7 +123,7 @@ class TestPets:
         )
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_update_with_all_params(self, client: YolkenTest6) -> None:
         pet = client.pets.update(
@@ -144,7 +144,7 @@ class TestPets:
         )
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_update(self, client: YolkenTest6) -> None:
         response = client.pets.with_raw_response.update(
@@ -157,7 +157,7 @@ class TestPets:
         pet = response.parse()
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_update(self, client: YolkenTest6) -> None:
         with client.pets.with_streaming_response.update(
@@ -172,7 +172,7 @@ class TestPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_delete(self, client: YolkenTest6) -> None:
         pet = client.pets.delete(
@@ -180,7 +180,7 @@ class TestPets:
         )
         assert pet is None
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_delete(self, client: YolkenTest6) -> None:
         response = client.pets.with_raw_response.delete(
@@ -192,7 +192,7 @@ class TestPets:
         pet = response.parse()
         assert pet is None
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_delete(self, client: YolkenTest6) -> None:
         with client.pets.with_streaming_response.delete(
@@ -206,13 +206,13 @@ class TestPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_find_by_status(self, client: YolkenTest6) -> None:
         pet = client.pets.find_by_status()
         assert_matches_type(PetFindByStatusResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_find_by_status_with_all_params(self, client: YolkenTest6) -> None:
         pet = client.pets.find_by_status(
@@ -220,7 +220,7 @@ class TestPets:
         )
         assert_matches_type(PetFindByStatusResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_find_by_status(self, client: YolkenTest6) -> None:
         response = client.pets.with_raw_response.find_by_status()
@@ -230,7 +230,7 @@ class TestPets:
         pet = response.parse()
         assert_matches_type(PetFindByStatusResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_find_by_status(self, client: YolkenTest6) -> None:
         with client.pets.with_streaming_response.find_by_status() as response:
@@ -242,13 +242,13 @@ class TestPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_find_by_tags(self, client: YolkenTest6) -> None:
         pet = client.pets.find_by_tags()
         assert_matches_type(PetFindByTagsResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_find_by_tags_with_all_params(self, client: YolkenTest6) -> None:
         pet = client.pets.find_by_tags(
@@ -256,7 +256,7 @@ class TestPets:
         )
         assert_matches_type(PetFindByTagsResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_find_by_tags(self, client: YolkenTest6) -> None:
         response = client.pets.with_raw_response.find_by_tags()
@@ -266,7 +266,7 @@ class TestPets:
         pet = response.parse()
         assert_matches_type(PetFindByTagsResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_find_by_tags(self, client: YolkenTest6) -> None:
         with client.pets.with_streaming_response.find_by_tags() as response:
@@ -278,7 +278,7 @@ class TestPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_update_by_id(self, client: YolkenTest6) -> None:
         pet = client.pets.update_by_id(
@@ -286,7 +286,7 @@ class TestPets:
         )
         assert pet is None
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_update_by_id_with_all_params(self, client: YolkenTest6) -> None:
         pet = client.pets.update_by_id(
@@ -296,7 +296,7 @@ class TestPets:
         )
         assert pet is None
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_update_by_id(self, client: YolkenTest6) -> None:
         response = client.pets.with_raw_response.update_by_id(
@@ -308,7 +308,7 @@ class TestPets:
         pet = response.parse()
         assert pet is None
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_update_by_id(self, client: YolkenTest6) -> None:
         with client.pets.with_streaming_response.update_by_id(
@@ -322,31 +322,31 @@ class TestPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_upload_image(self, client: YolkenTest6) -> None:
         pet = client.pets.upload_image(
             pet_id=0,
-            image=b"raw file contents",
+            image=b"Example data",
         )
         assert_matches_type(PetUploadImageResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_method_upload_image_with_all_params(self, client: YolkenTest6) -> None:
         pet = client.pets.upload_image(
             pet_id=0,
-            image=b"raw file contents",
+            image=b"Example data",
             additional_metadata="additionalMetadata",
         )
         assert_matches_type(PetUploadImageResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_raw_response_upload_image(self, client: YolkenTest6) -> None:
         response = client.pets.with_raw_response.upload_image(
             pet_id=0,
-            image=b"raw file contents",
+            image=b"Example data",
         )
 
         assert response.is_closed is True
@@ -354,12 +354,12 @@ class TestPets:
         pet = response.parse()
         assert_matches_type(PetUploadImageResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     def test_streaming_response_upload_image(self, client: YolkenTest6) -> None:
         with client.pets.with_streaming_response.upload_image(
             pet_id=0,
-            image=b"raw file contents",
+            image=b"Example data",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -375,7 +375,7 @@ class TestAsyncPets:
         "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
     )
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_create(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.create(
@@ -384,7 +384,7 @@ class TestAsyncPets:
         )
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_create_with_all_params(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.create(
@@ -405,7 +405,7 @@ class TestAsyncPets:
         )
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_create(self, async_client: AsyncYolkenTest6) -> None:
         response = await async_client.pets.with_raw_response.create(
@@ -418,7 +418,7 @@ class TestAsyncPets:
         pet = await response.parse()
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_create(self, async_client: AsyncYolkenTest6) -> None:
         async with async_client.pets.with_streaming_response.create(
@@ -433,7 +433,7 @@ class TestAsyncPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_retrieve(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.retrieve(
@@ -441,7 +441,7 @@ class TestAsyncPets:
         )
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_retrieve(self, async_client: AsyncYolkenTest6) -> None:
         response = await async_client.pets.with_raw_response.retrieve(
@@ -453,7 +453,7 @@ class TestAsyncPets:
         pet = await response.parse()
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_retrieve(self, async_client: AsyncYolkenTest6) -> None:
         async with async_client.pets.with_streaming_response.retrieve(
@@ -467,7 +467,7 @@ class TestAsyncPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_update(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.update(
@@ -476,7 +476,7 @@ class TestAsyncPets:
         )
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_update_with_all_params(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.update(
@@ -497,7 +497,7 @@ class TestAsyncPets:
         )
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_update(self, async_client: AsyncYolkenTest6) -> None:
         response = await async_client.pets.with_raw_response.update(
@@ -510,7 +510,7 @@ class TestAsyncPets:
         pet = await response.parse()
         assert_matches_type(Pet, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_update(self, async_client: AsyncYolkenTest6) -> None:
         async with async_client.pets.with_streaming_response.update(
@@ -525,7 +525,7 @@ class TestAsyncPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_delete(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.delete(
@@ -533,7 +533,7 @@ class TestAsyncPets:
         )
         assert pet is None
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_delete(self, async_client: AsyncYolkenTest6) -> None:
         response = await async_client.pets.with_raw_response.delete(
@@ -545,7 +545,7 @@ class TestAsyncPets:
         pet = await response.parse()
         assert pet is None
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_delete(self, async_client: AsyncYolkenTest6) -> None:
         async with async_client.pets.with_streaming_response.delete(
@@ -559,13 +559,13 @@ class TestAsyncPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_find_by_status(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.find_by_status()
         assert_matches_type(PetFindByStatusResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_find_by_status_with_all_params(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.find_by_status(
@@ -573,7 +573,7 @@ class TestAsyncPets:
         )
         assert_matches_type(PetFindByStatusResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_find_by_status(self, async_client: AsyncYolkenTest6) -> None:
         response = await async_client.pets.with_raw_response.find_by_status()
@@ -583,7 +583,7 @@ class TestAsyncPets:
         pet = await response.parse()
         assert_matches_type(PetFindByStatusResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_find_by_status(self, async_client: AsyncYolkenTest6) -> None:
         async with async_client.pets.with_streaming_response.find_by_status() as response:
@@ -595,13 +595,13 @@ class TestAsyncPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_find_by_tags(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.find_by_tags()
         assert_matches_type(PetFindByTagsResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_find_by_tags_with_all_params(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.find_by_tags(
@@ -609,7 +609,7 @@ class TestAsyncPets:
         )
         assert_matches_type(PetFindByTagsResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_find_by_tags(self, async_client: AsyncYolkenTest6) -> None:
         response = await async_client.pets.with_raw_response.find_by_tags()
@@ -619,7 +619,7 @@ class TestAsyncPets:
         pet = await response.parse()
         assert_matches_type(PetFindByTagsResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_find_by_tags(self, async_client: AsyncYolkenTest6) -> None:
         async with async_client.pets.with_streaming_response.find_by_tags() as response:
@@ -631,7 +631,7 @@ class TestAsyncPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_update_by_id(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.update_by_id(
@@ -639,7 +639,7 @@ class TestAsyncPets:
         )
         assert pet is None
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_update_by_id_with_all_params(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.update_by_id(
@@ -649,7 +649,7 @@ class TestAsyncPets:
         )
         assert pet is None
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_update_by_id(self, async_client: AsyncYolkenTest6) -> None:
         response = await async_client.pets.with_raw_response.update_by_id(
@@ -661,7 +661,7 @@ class TestAsyncPets:
         pet = await response.parse()
         assert pet is None
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_update_by_id(self, async_client: AsyncYolkenTest6) -> None:
         async with async_client.pets.with_streaming_response.update_by_id(
@@ -675,31 +675,31 @@ class TestAsyncPets:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_upload_image(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.upload_image(
             pet_id=0,
-            image=b"raw file contents",
+            image=b"Example data",
         )
         assert_matches_type(PetUploadImageResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_method_upload_image_with_all_params(self, async_client: AsyncYolkenTest6) -> None:
         pet = await async_client.pets.upload_image(
             pet_id=0,
-            image=b"raw file contents",
+            image=b"Example data",
             additional_metadata="additionalMetadata",
         )
         assert_matches_type(PetUploadImageResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_raw_response_upload_image(self, async_client: AsyncYolkenTest6) -> None:
         response = await async_client.pets.with_raw_response.upload_image(
             pet_id=0,
-            image=b"raw file contents",
+            image=b"Example data",
         )
 
         assert response.is_closed is True
@@ -707,12 +707,12 @@ class TestAsyncPets:
         pet = await response.parse()
         assert_matches_type(PetUploadImageResponse, pet, path=["response"])
 
-    @pytest.mark.skip(reason="Prism tests are disabled")
+    @pytest.mark.skip(reason="Mock server tests are disabled")
     @parametrize
     async def test_streaming_response_upload_image(self, async_client: AsyncYolkenTest6) -> None:
         async with async_client.pets.with_streaming_response.upload_image(
             pet_id=0,
-            image=b"raw file contents",
+            image=b"Example data",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
